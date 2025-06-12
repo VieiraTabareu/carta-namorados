@@ -9,31 +9,34 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #2f2f2f;
       color: #fbe4e6;
-      max-width: 600px;
-      margin: auto;
-      padding: 15px 10px;
+      margin: 0;
+      padding: 15px 5vw;
+      box-sizing: border-box;
       scroll-behavior: smooth;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     section {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 5vh 2vw;
       box-sizing: border-box;
-      min-height: 100vh; /* altura mínima da tela para rolagem */
-      padding: 40px 10px; /* espaço extra em cima e embaixo */
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
       margin-bottom: 0;
     }
 
     .photo-large {
-      width: 180px;
-      height: 180px;
+      width: clamp(140px, 35vw, 180px);
+      height: clamp(140px, 35vw, 180px);
       object-fit: cover;
       clip-path: path("M 90 0
         C 80 -14, 0 7, 0 57
@@ -44,45 +47,11 @@
       margin-bottom: 15px;
     }
 
-    .heart-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      max-width: 100%;
-      margin-top: 20px;
-      justify-items: center;
-    }
-
-    .heart-grid img {
-      width: 35px;
-      height: 35px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-
     p {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 3vw, 1.2rem);
       line-height: 1.6;
-      text-align: justify;
       max-width: 100%;
-    }
-
-    @media screen and (max-width: 400px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      .photo-large {
-        width: 140px;
-        height: 140px;
-      }
-      .heart-grid img {
-        width: 30px;
-        height: 30px;
-      }
+      text-align: justify;
     }
   </style>
 </head>
@@ -96,7 +65,9 @@
   <!-- Foto especial + frase -->
   <section>
     <img src="fotos/Foto4.jpg" alt="Foto especial" class="photo-large" />
-    <p style="font-size:1.3rem; margin-top:10px;">Feliz dia dos namorados, meu dengo</p>
+    <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top:10px;">
+      Feliz dia dos namorados, meu dengo
+    </p>
   </section>
 
   <!-- Texto da carta -->
@@ -123,21 +94,6 @@
       Te amo, minha gatinha.<br>
       Obs: Muito.
     </p>
-  </section>
-
-  <!-- Grade 3x3 de fotos -->
-  <section>
-    <div class="heart-grid">
-      <img src="fotos/Foto1.jpg" alt="Foto 1" />
-      <img src="fotos/Foto2.jpg" alt="Foto 2" />
-      <img src="fotos/Foto3.jpg" alt="Foto 3" />
-      <img src="fotos/Foto4.jpg" alt="Foto 4" />
-      <img src="fotos/Foto5.jpg" alt="Foto 5" />
-      <img src="fotos/Foto6.jpg" alt="Foto 6" />
-      <img src="fotos/Foto7.jpg" alt="Foto 7" />
-      <img src="fotos/Foto8.jpg" alt="Foto 8" />
-      <img src="fotos/Foto9.jpg" alt="Foto 9" />
-    </div>
   </section>
 
 </body>
