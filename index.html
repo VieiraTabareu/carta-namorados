@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Carta Digital</title>
+  <title>Para Você</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100vh;
-    }
-    section {
-      scroll-snap-align: start;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: cursive;
+      background: #fff8f0;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
       padding: 20px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Minha Carta Para Você 💌</h1>
+  <p>Querida,</p>
+  <p>Escrevi esse site como uma carta especial só para você...</p>
 
+  <img src="fotos/nossa-foto.jpg" alt="Nós dois juntos">
+  
+  <p>Te amo muito. Espero que goste!</p>
+
+  <audio controls autoplay loop>
+    <source src="musica/romantica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+</body>
+</html>
