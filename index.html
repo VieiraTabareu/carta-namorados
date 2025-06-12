@@ -7,15 +7,18 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #2f2f2f;
-      color: #fbe4e6;
       margin: 0;
-      padding: 15px 5vw;
-      box-sizing: border-box;
+      padding: 0;
       scroll-behavior: smooth;
+      background: #2f2f2f; /* cinza de giz */
+      color: #fbe4e6;
+    }
+
+    main {
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
+      padding: 20px 5vw;
+      box-sizing: border-box;
     }
 
     section {
@@ -38,12 +41,7 @@
       width: clamp(140px, 35vw, 180px);
       height: clamp(140px, 35vw, 180px);
       object-fit: cover;
-      clip-path: path("M 90 0
-        C 80 -14, 0 7, 0 57
-        C 0 107, 90 180, 90 180
-        C 90 180, 180 107, 180 57
-        C 180 7, 100 -14, 90 0
-        Z");
+      clip-path: path("M 90 0 C 80 -14, 0 7, 0 57 C 0 107, 90 180, 90 180 C 90 180, 180 107, 180 57 C 180 7, 100 -14, 90 0 Z");
       margin-bottom: 15px;
     }
 
@@ -53,48 +51,103 @@
       max-width: 100%;
       text-align: justify;
     }
+
+    .letter-section {
+      background: #2f2f2f;
+      padding: 5vh 2vw;
+    }
+
+    .photo-book {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .photo-book img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 600px) {
+      .photo-book {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .photo-book img:nth-child(1) {
+        grid-column: span 2;
+      }
+
+      .photo-book img:nth-child(4) {
+        grid-row: span 2;
+      }
+
+      .photo-book img:nth-child(6) {
+        grid-column: span 2;
+      }
+    }
   </style>
 </head>
 <body>
+  <main>
 
-  <!-- Título -->
-  <section>
-    <h1>E se a carta for digital, é brega?</h1>
-  </section>
+    <!-- Título -->
+    <section>
+      <h1>E se a carta for digital, é brega?</h1>
+    </section>
 
-  <!-- Foto especial + frase -->
-  <section>
-    <img src="fotos/Foto4.jpg" alt="Foto especial" class="photo-large" />
-    <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top:10px;">
-      Feliz dia dos namorados, meu dengo
-    </p>
-  </section>
+    <!-- Foto especial + frase -->
+    <section>
+      <img src="fotos/Foto4.jpg" alt="Foto especial" class="photo-large" />
+      <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top:10px;">
+        Feliz dia dos namorados, meu dengo
+      </p>
+    </section>
 
-  <!-- Texto da carta -->
-  <section>
-    <p>
-      A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.<br>
-      Importante como o primeiro passeio, pra caminhar.<br>
-      Importante como o primeira saída, pra jantar.<br>
-      Importante como a primeira conversa de se relacionar.<br>
-      Importante como, finalmente, o primeiro beijo. E que beijo.<br>
-      +18: Importante como a primeira transa — uma contravenção, diga-se de passagem, dois errado.<br><br>
+    <!-- Texto da carta -->
+    <section class="letter-section">
+      <p>
+        A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.<br>
+        Importante como o primeiro passeio, pra caminhar.<br>
+        Importante como o primeira saída, pra jantar.<br>
+        Importante como a primeira conversa de se relacionar.<br>
+        Importante como, finalmente, o primeiro beijo. E que beijo.<br>
+        +18: Importante como a primeira transa — uma contravenção, diga-se de passagem, dois errado.<br><br>
 
-      Passar o primeiro — de muitos — dia dos namorados contigo me traz todas as lembranças do quanto eu imaginei e idealizei como seria estar com você.<br>
-      O quanto esperei, o quanto quis. No primeiro momento pensei que depois de todo esse tempo tentando, estar com você era uma conquista.<br>
-      Mas percebo que na verdade você é um presente. Não no sentido de objeto, mas no sentido imaterial. Um presente pra minha alma, um presente pro meu ser, um presente pro meu futuro.<br><br>
+        Passar o primeiro — de muitos — dia dos namorados contigo me traz todas as lembranças do quanto eu imaginei e idealizei como seria estar com você.<br>
+        O quanto esperei, o quanto quis. No primeiro momento pensei que depois de todo esse tempo tentando, estar com você era uma conquista.<br>
+        Mas percebo que na verdade você é um presente. Não no sentido de objeto, mas no sentido imaterial. Um presente pra minha alma, um presente pro meu ser, um presente pro meu futuro.<br><br>
 
-      Então só me cabe agradecer a Deus por trazer você até mim, equalizar nossas energias — minha luz — e me ancorar no seu cais — meu porto. Mas como essa conversa é entre eu e ele, com licença.<br><br>
+        Então só me cabe agradecer a Deus por trazer você até mim, equalizar nossas energias — minha luz — e me ancorar no seu cais — meu porto. Mas como essa conversa é entre eu e ele, com licença.<br><br>
 
-      Dito isso, fica minha gratidão a você. Por entrar em minha vida me fazendo imensuravelmente feliz, completo e com sede de viver pra sempre estar com você. Por me fazer descobrir o que é amar e me tornar a pessoa que está disposta a dar o mundo inteiro só pra ganhar um sorriso teu, e que sorriso.<br>
-      Por ser essa pessoa incrível e, que se fosse para ser breve e resumir em poucas palavras se tornaria, indescritível. Por ter finalmente baixado a guarda e parar de ficar, parafraseando Thiaguinho: <em>"adiando a vontade de Deus"</em>, me permitindo mostrar quem eu sou, o quanto eu te admiro, te respeito, e principalmente o quanto eu sempre te quis — <strong>e te quero</strong>.<br><br>
+        Dito isso, fica minha gratidão a você. Por entrar em minha vida me fazendo imensuravelmente feliz, completo e com sede de viver pra sempre estar com você. Por me fazer descobrir o que é amar e me tornar a pessoa que está disposta a dar o mundo inteiro só pra ganhar um sorriso teu, e que sorriso.<br>
+        Por ser essa pessoa incrível e, que se fosse para ser breve e resumir em poucas palavras se tornaria, indescritível. Por ter finalmente baixado a guarda e parar de ficar, parafraseando Thiaguinho: <em>"adiando a vontade de Deus"</em>, me permitindo mostrar quem eu sou, o quanto eu te admiro, te respeito, e principalmente o quanto eu sempre te quis — <strong>e te quero</strong>.<br><br>
 
-      Pra você, meu amor, eu estou disposto a mover o mundo, seja nele montanhas ou um grão de areia. Para sempre estar com você, voltar pra você, e fazer o que temos ser perfeito, e, por fim, não ser a razão dela mas, agregar à sua vida <strong>FELICIDADE</strong> pra te tornar <strong>COMPLETA</strong>.<br><br>
+        Pra você, meu amor, eu estou disposto a mover o mundo, seja nele montanhas ou um grão de areia. Para sempre estar com você, voltar pra você, e fazer o que temos ser perfeito, e, por fim, não ser a razão dela mas, agregar à sua vida <strong>FELICIDADE</strong> pra te tornar <strong>COMPLETA</strong>.<br><br>
 
-      Te amo, minha gatinha.<br>
-      Obs: Muito.
-    </p>
-  </section>
+        Te amo, minha gatinha.<br>
+        Obs: Muito.
+      </p>
+    </section>
 
+    <!-- Book de fotos final -->
+    <section>
+      <div class="photo-book">
+        <img src="fotos/Foto1.jpg" alt="Foto 1">
+        <img src="fotos/Foto2.jpg" alt="Foto 2">
+        <img src="fotos/Foto3.jpg" alt="Foto 3">
+        <img src="fotos/Foto4.jpg" alt="Foto 4">
+        <img src="fotos/Foto5.jpg" alt="Foto 5">
+        <img src="fotos/Foto6.jpg" alt="Foto 6">
+        <img src="fotos/Foto7.jpg" alt="Foto 7">
+        <img src="fotos/Foto8.jpg" alt="Foto 8">
+        <img src="fotos/Foto9.jpg" alt="Foto 9">
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
