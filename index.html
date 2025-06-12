@@ -6,13 +6,14 @@
   <style>
     body {
       font-family: cursive, sans-serif;
-      background: #fff8f0;
-      color: #333;
+      background: #2f2f2f;
+      color: #fbe4e6;
       max-width: 600px;
       margin: auto;
       padding: 20px;
       scroll-behavior: smooth;
     }
+
     section {
       min-height: 100vh;
       display: flex;
@@ -23,88 +24,112 @@
       padding: 20px;
       box-sizing: border-box;
     }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 0;
     }
+
     .photo-large {
-      width: 70vw;
-      max-width: 600px;
-      border-radius: 10px;
-      margin-bottom: 10px;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      clip-path: path("M 125 0
+        C 110 -20, 0 10, 0 80
+        C 0 150, 125 250, 125 250
+        C 125 250, 250 150, 250 80
+        C 250 10, 140 -20, 125 0
+        Z");
+      margin-bottom: 20px;
     }
-    .heart-photos {
+
+    .heart-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 5px;
-      width: 100%;
-      max-width: 400px;
-      justify-items: center;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 100%;
+      margin-top: 30px;
     }
-    .heart-photos img {
-      width: 70px;
-      height: 70px;
+
+    .heart-grid img {
+      width: 40px;
+      height: 40px;
       object-fit: cover;
       border-radius: 50%;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.44rem; /* aumento 20% */
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    @media screen and (max-width: 500px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      .heart-grid img {
+        width: 35px;
+        height: 35px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1ª tela - título -->
+  <!-- Título -->
   <section>
     <h1>E se a carta for digital, é brega?</h1>
   </section>
 
-  <!-- 2ª tela - foto + frase -->
+  <!-- Foto especial + frase -->
   <section>
-    <img src="fotos/sua-foto.jpg" alt="Foto especial" class="photo-large" />
+    <img src="fotos/Foto4.jpg" alt="Foto especial" class="photo-large" />
     <p style="font-size:1.5rem; margin-top:10px;">Feliz dia dos namorados, meu dengo</p>
   </section>
 
-  <!-- 3ª tela - texto da carta -->
+  <!-- Texto da carta -->
   <section>
-    <p style="font-size:1.2rem; max-width: 90%; margin: auto;">
-      A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.
-Importante como o primeiro passeio, pra caminhar.
-Importante como o primeira saída, pra jantar.
-Importante como a primeira conversa de se relacionar.
-Importante como, finalmente, o primeiro beijo. E que beijo.
-+18: Importante como a primeira transa - uma contravenção, diga-se de passagem, dois erradinhos.
+    <p>
+      A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.<br>
+      Importante como o primeiro passeio, pra caminhar.<br>
+      Importante como o primeira saída, pra jantar.<br>
+      Importante como a primeira conversa de se relacionar.<br>
+      Importante como, finalmente, o primeiro beijo. E que beijo.<br>
+      +18: Importante como a primeira transa — uma contravenção, diga-se de passagem, dois errado.<br><br>
 
-Passar o primeiro - de muitos - dia dos namorados contigo me tras todas as lembranças do quanto eu imaginei e idealizei como seria estar com você.
-O quanto esperei, o quanto quis. No primeiro momento pensei que depois de todo esse tempo tentando, estar com você era uma conquista.
-Mas percebo que na verdade você é um presente. Nao no sentido de objeto, mas no sentido imaterial. Um presente pra minha alma, um presente pro meu ser, um presente pro meu futuro.
+      Passar o primeiro — de muitos — dia dos namorados contigo me traz todas as lembranças do quanto eu imaginei e idealizei como seria estar com você.<br>
+      O quanto esperei, o quanto quis. No primeiro momento pensei que depois de todo esse tempo tentando, estar com você era uma conquista.<br>
+      Mas percebo que na verdade você é um presente. Não no sentido de objeto, mas no sentido imaterial. Um presente pra minha alma, um presente pro meu ser, um presente pro meu futuro.<br><br>
 
-Então so me cabe agradecer a Deus por trazer você até mim, equalizar nossas energias - minha luz - e me ancorar no seu cais - meu porto. Mas como essa conversa é entre eu e ele, com licença.
+      Então só me cabe agradecer a Deus por trazer você até mim, equalizar nossas energias — minha luz — e me ancorar no seu cais — meu porto. Mas como essa conversa é entre eu e ele, com licença.<br><br>
 
-Dito isso, fica minha gratidão a você. Por entrar em minha vida me fazendo imensuravelmente feliz, completo e com sede de viver pra sempre estar com você. Por me fazer descobrir o que é amar e me tornar a pessoa que esta disposta a dar o mundo inteiro só pra ganhar um sorriso teu, e que sorriso. 
-Por ser essa pessoa incrível e, que se fosse para ser breve e resumir em poucas palavras se tornaria, indescritível. Por ter finalmente baixado a guarda e parar de ficar, parafreseando Thiaguinho: "adiando a vontade de Deus", me permitindo mostrar quem eu sou, o quanto eu te admiro, te respeito, e principalmente o quanto eu sempre te quis - e te quero. Pra você, meu amor, eu estou disposto a mover o mundo, seja nele montanhas ou um grão de areia, pra estar com você, fazer o que temos dar certo e, não ser a razao dela mas, agregar a sua vida felicidade pra torná-la completa.
+      Dito isso, fica minha gratidão a você. Por entrar em minha vida me fazendo imensuravelmente feliz, completo e com sede de viver pra sempre estar com você. Por me fazer descobrir o que é amar e me tornar a pessoa que está disposta a dar o mundo inteiro só pra ganhar um sorriso teu, e que sorriso.<br>
+      Por ser essa pessoa incrível e, que se fosse para ser breve e resumir em poucas palavras se tornaria, indescritível. Por ter finalmente baixado a guarda e parar de ficar, parafraseando Thiaguinho: <em>"adiando a vontade de Deus"</em>, me permitindo mostrar quem eu sou, o quanto eu te admiro, te respeito, e principalmente o quanto eu sempre te quis — <strong>e te quero</strong>.<br><br>
 
-Te amo, minha gatinha.
-Obs: Muito.      
+      Pra você, meu amor, eu estou disposto a mover o mundo, seja nele montanhas ou um grão de areia. Para sempre estar com você, voltar pra você, e fazer o que temos ser perfeito, e, por fim, não ser a razão dela mas, agregar à sua vida <strong>FELICIDADE</strong> pra te tornar <strong>COMPLETA</strong>.<br><br>
+
+      Te amo, minha gatinha.<br>
+      Obs: Muito.
     </p>
   </section>
 
-  <!-- 4ª tela - coração de fotos -->
+  <!-- Grade 3x3 de fotos -->
   <section>
-    <div class="heart-photos">
-      <!-- Exemplo com 13 fotos, você pode trocar as imagens -->
-      <img src="fotos/c1.jpg" alt="Foto coração 1" />
-      <img src="fotos/c2.jpg" alt="Foto coração 2" />
-      <img src="fotos/c3.jpg" alt="Foto coração 3" />
-      <img src="fotos/c4.jpg" alt="Foto coração 4" />
-      <img src="fotos/c5.jpg" alt="Foto coração 5" />
-      <img src="fotos/c6.jpg" alt="Foto coração 6" />
-      <img src="fotos/c7.jpg" alt="Foto coração 7" />
-      <img src="fotos/c8.jpg" alt="Foto coração 8" />
-      <img src="fotos/c9.jpg" alt="Foto coração 9" />
-      <img src="fotos/c10.jpg" alt="Foto coração 10" />
-      <img src="fotos/c11.jpg" alt="Foto coração 11" />
-      <img src="fotos/c12.jpg" alt="Foto coração 12" />
-      <img src="fotos/c13.jpg" alt="Foto coração 13" />
+    <div class="heart-grid">
+      <img src="fotos/Foto1.jpg" alt="Foto 1" />
+      <img src="fotos/Foto2.jpg" alt="Foto 2" />
+      <img src="fotos/Foto3.jpg" alt="Foto 3" />
+      <img src="fotos/Foto4.jpg" alt="Foto 4" />
+      <img src="fotos/Foto5.jpg" alt="Foto 5" />
+      <img src="fotos/Foto6.jpg" alt="Foto 6" />
+      <img src="fotos/Foto7.jpg" alt="Foto 7" />
+      <img src="fotos/Foto8.jpg" alt="Foto 8" />
+      <img src="fotos/Foto9.jpg" alt="Foto 9" />
     </div>
   </section>
 
