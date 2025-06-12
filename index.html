@@ -1,40 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Para Você</title>
+  <meta charset="UTF-8" />
+  <title>Carta Digital</title>
   <style>
     body {
-      font-family: cursive;
+      font-family: cursive, sans-serif;
       background: #fff8f0;
       color: #333;
       max-width: 600px;
       margin: auto;
       padding: 20px;
+      scroll-behavior: smooth;
     }
-    img {
-      width: 100%;
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    .photo-large {
+      width: 70vw;
+      max-width: 600px;
       border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .heart-photos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+      width: 100%;
+      max-width: 400px;
+      justify-items: center;
       margin-top: 20px;
     }
-    audio {
-      margin-top: 20px;
-      width: 100%;
+    .heart-photos img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
     }
   </style>
 </head>
 <body>
-  <h1>Minha Carta Para Você 💌</h1>
-  <p>Querida,</p>
-  <p>Escrevi esse site como uma carta especial só para você...</p>
 
-  <img src="fotos/nossa-foto.jpg" alt="Nós dois juntos">
-  
-  <p>Te amo muito. Espero que goste!</p>
+  <!-- 1ª tela - título -->
+  <section>
+    <h1>E se a carta for digital, é brega?</h1>
+  </section>
 
-  <audio controls autoplay loop>
-    <source src="musica/romantica.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
+  <!-- 2ª tela - foto + frase -->
+  <section>
+    <img src="fotos/sua-foto.jpg" alt="Foto especial" class="photo-large" />
+    <p style="font-size:1.5rem; margin-top:10px;">Feliz dia dos namorados, meu dengo</p>
+  </section>
+
+  <!-- 3ª tela - texto da carta -->
+  <section>
+    <p style="font-size:1.2rem; max-width: 90%; margin: auto;">
+      ESCREVA AQUI
+    </p>
+  </section>
+
+  <!-- 4ª tela - coração de fotos -->
+  <section>
+    <div class="heart-photos">
+      <!-- Exemplo com 13 fotos, você pode trocar as imagens -->
+      <img src="fotos/c1.jpg" alt="Foto coração 1" />
+      <img src="fotos/c2.jpg" alt="Foto coração 2" />
+      <img src="fotos/c3.jpg" alt="Foto coração 3" />
+      <img src="fotos/c4.jpg" alt="Foto coração 4" />
+      <img src="fotos/c5.jpg" alt="Foto coração 5" />
+      <img src="fotos/c6.jpg" alt="Foto coração 6" />
+      <img src="fotos/c7.jpg" alt="Foto coração 7" />
+      <img src="fotos/c8.jpg" alt="Foto coração 8" />
+      <img src="fotos/c9.jpg" alt="Foto coração 9" />
+      <img src="fotos/c10.jpg" alt="Foto coração 10" />
+      <img src="fotos/c11.jpg" alt="Foto coração 11" />
+      <img src="fotos/c12.jpg" alt="Foto coração 12" />
+      <img src="fotos/c13.jpg" alt="Foto coração 13" />
+    </div>
+  </section>
+
 </body>
 </html>
