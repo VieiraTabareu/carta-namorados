@@ -18,8 +18,11 @@ function updateCounter(){
     const restAfterDays = restAfterMonths % (1000 * 60 * 60 * 24);
     const hours = Math.floor(restAfterDays / (1000 * 60 * 60));
 
+    const restAfterMinutes = restAfterHours % (1000 * 60);
+    const seconds = Math.floor(restAfterMinutes / 1000);
+
     document.getElementById("counter").innerHTML = 
-        `${years} Anos, ${months} Meses, ${days} Dias e ${hours} Horas junto!`;
+        `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos construindo nossa jornada ❤️`;
 }
 
 setInterval(updateCounter, 1000);
