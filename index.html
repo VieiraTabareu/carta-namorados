@@ -91,28 +91,29 @@
     }
 
     .slideshow {
-      position: relative;
-      width: 300px;   /* defina o tamanho que quiser */
-      height: 200px;
-      margin-top: 20px;
-      overflow: hidden;
-    }
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
+}
 
-    .slideshow img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      object-fit: cover; /* mantém a proporção da imagem */
-    }
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  object-position: center;
+ opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-    .slideshow img.active {
-      opacity: 1;
-      z-index: 1;
-    }
+.slideshow img.active {
+  opacity: 1;
+  z-index: 1;
+}
 
     .heart {
       font-size: 15px;
@@ -138,15 +139,21 @@
       <div id="counter" class="counter"></div>
 
       <div id="heart" class="heart">❤️</div>
-      <h5>enchendo seu saco, de pegações no carro por salvador e aguentando suas mini-bravezas</h5>
+      <h5>enchendo seu saco, de pegações no carro pelas ruas, comendo lanches por salvador e aguentando suas mini-bravezas</h5>
 
       <!-- Slideshow -->
       <div class="slideshow">
-        <img src="foto1.jpg" class="slide active" alt="Foto 1" />
-        <img src="foto2.jpg" class="slide" alt="Foto 2" />
-        <img src="foto3.jpg" class="slide" alt="Foto 3" />
+        <img src="fotos/foto1.jpg" class="slide active" alt="Foto 1" />
+        <img src="fotos/foto3.jpg" class="slide" alt="Foto 3" />
+        <img src="fotos/Foto4.jpg" class="slide" alt="Foto 4" />
+        <img src="fotos/Foto5.jpg" class="slide" alt="Foto 5" />
+        <img src="fotos/Foto6.jpg" class="slide" alt="Foto 6" />
+        <img src="fotos/Foto7.jpg" class="slide" alt="Foto 7" />
+        <img src="fotos/Foto8.jpg" class="slide" alt="Foto 8" />
+        <img src="fotos/Foto9.jpg" class="slide" alt="Foto 9" />
         <!-- adicione quantas fotos quiser -->
       </div>
+<h4>Estado civil: NOIVOS 💍</h4>
     </section>
 
     <!-- Título -->
