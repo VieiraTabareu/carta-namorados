@@ -3,10 +3,8 @@ const start = new Date("2025-05-10T17:17:00");
 function updateCounter() {
   const now = new Date();
 
-  // Diferença em milissegundos
   const diff = now - start;
 
-  // Cálculo de anos, meses, dias, horas, minutos, segundos
   const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
   const restAfterYears = diff % (1000 * 60 * 60 * 24 * 365.25);
 
@@ -30,3 +28,16 @@ function updateCounter() {
 
 setInterval(updateCounter, 1000);
 updateCounter();
+
+window.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slideshow .slide');
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 3000);
+});
