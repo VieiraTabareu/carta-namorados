@@ -23,7 +23,7 @@ function updateCounter() {
   const seconds = Math.floor(restAfterMinutes / 1000);
 
   document.getElementById("counter").innerHTML =
-    `${years} anos, ${months} mês, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+    `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
 }
 
 setInterval(updateCounter, 1000);
