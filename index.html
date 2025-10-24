@@ -32,17 +32,20 @@
       box-sizing: border-box;
     }
 
+    h1, h2, h3, h4, h5 {
+      margin-bottom: 0.5em;
+    }
+
     h1, h2 {
       font-size: clamp(1.8rem, 5vw, 2.8rem);
-      margin-bottom: 0;
     }
 
     .photo-large {
-      width: clamp(140px, 35vw, 180px);
-      height: clamp(140px, 35vw, 180px);
+      width: clamp(180px, 40vw, 230px);
+      height: clamp(180px, 40vw, 230px);
       object-fit: cover;
       clip-path: path("M 90 0 C 80 -14, 0 7, 0 57 C 0 107, 90 180, 90 180 C 90 180, 180 107, 180 57 C 180 7, 100 -14, 90 0 Z");
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     p {
@@ -91,33 +94,33 @@
     }
 
     .slideshow {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-top: 20px;
-  overflow: hidden;
-}
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
 
-.slideshow img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  object-position: center;
- opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
 
-.slideshow img.slide {
-  border-radius: 5px;        /* opcional: bordas levemente arredondadas */
-}
+    .slideshow img.slide {
+      border-radius: 5px;
+    }
 
-.slideshow img.active {
-  opacity: 1;
-  z-index: 1;
-}
+    .slideshow img.active {
+      opacity: 1;
+      z-index: 1;
+    }
 
     .heart {
       font-size: 15px;
@@ -125,64 +128,109 @@
     }
 
     @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.5);
-      }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.5); }
     }
   </style>
 </head>
 <body>
   <main>
 
-    <!-- Contador -->
+    <!-- Seção 1: Contador e slideshow inicial -->
     <section>
       <h3>O tempo da nossa história:</h3>
       <div id="counter" class="counter"></div>
 
       <div id="heart" class="heart">❤️</div>
-      <h5>enchendo seu saco, de pegações no carro pelas ruas, comendo lanches por salvador e aguentando suas mini-bravezas</h5>
+      <h5>Enchendo seu saco, de pegações no carro pelas ruas, experimentando restaurantes, cafés e lanches por Salvador e aguentando suas mini-bravezas.</h5>
 
-      <!-- Slideshow -->
+      <!-- Slideshow inicial -->
       <div class="slideshow">
         <img src="fotos/Foto1.jpg" class="slide active" alt="Foto 1" />
+	<img src="fotos/Foto23.jpg" class="slide" alt="Foto 23" />
         <img src="fotos/Foto3.jpg" class="slide" alt="Foto 3" />
-        <img src="fotos/Foto6.jpg" class="slide" alt="Foto 6" />
-        <img src="fotos/Foto7.jpg" class="slide" alt="Foto 7" />
-        <img src="fotos/Foto8.jpg" class="slide" alt="Foto 8" />
-        <img src="fotos/Foto9.jpg" class="slide" alt="Foto 9" />
-	<img src="fotos/Foto10.jpg" class="slide" alt="Foto 10" />
-	<img src="fotos/Foto11.jpg" class="slide" alt="Foto 11" />
-        <img src="fotos/Foto12.jpg" class="slide" alt="Foto 12" />
-        <img src="fotos/Foto13.jpg" class="slide" alt="Foto 13" />
-	<img src="fotos/Foto14.jpg" class="slide" alt="Foto 14" />
-        <!-- adicione quantas fotos quiser -->
+	<img src="fotos/Foto15.jpg" class="slide" alt="Foto 15" />
+        <img src="fotos/Foto18.jpg" class="slide" alt="Foto 18" />
+	<img src="fotos/Foto2.jpg" class="slide" alt="Foto 2" />
+	<img src="fotos/Foto22.jpg" class="slide" alt="Foto 22" />
+     	<img src="fotos/Foto6.jpg" class="slide" alt="Foto 6" />
+	<img src="fotos/Foto16.jpg" class="slide" alt="Foto 16" />
+        <img src="fotos/Foto17.jpg" class="slide" alt="Foto 17" />
+	<img src="fotos/Foto19.jpg" class="slide" alt="Foto 19" />
+	<img src="fotos/Foto20.jpg" class="slide" alt="Foto 20" />
+	<img src="fotos/Foto21.jpg" class="slide" alt="Foto 21" />
       </div>
-<h4>Estado civil: NOIVOS 💍</h4>
+      <h4>Estado civil: NOIVOS 💍</h4>
     </section>
 
-    <!-- Título -->
+    <!-- Seção 2: Título -->
     <section>
-      <h1>Nosso album digital</h1>
+      <h1>Nosso álbum digital</h1>
     </section>
 
-    <!-- Foto especial + frase -->
+    <!-- Seção 3: Carta 1 (foto em formato de coração + texto) -->
     <section>
       <img src="fotos/Foto4.jpg" alt="Foto especial" class="photo-large" />
-      <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top: 10px;">
-        12/06/2025 - Dia dos namorados - Pedido de casamento
+      <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top: 20px;">
+        A cada dia que passa me impressiona como a certeza de que você é a pessoa perfeita para o meu ser só cresce.<br> 
+        É como se, a cada novo amanhecer, ao abrir os olhos e no primeiro instante lembrar que tenho você, uma reação em cadeia surgisse em meu organismo — um misto de gratidão e alegria. Essa reação produz um hormônio que me revigora, energiza e me traz o sentimento de plenitude. Levando ao meu cérebro o pensamento que confirma o que o coração já sabe há muito tempo: que é você a razão pela qual a vida ganha propósito e que é com você que eu quero estar, pois só com você a vida tem sentido.
+        <br><br><br>
+
+        A essa altura, já passamos por alguns cenários — dos incríveis aos turbulentos. E o curioso é que, independentemente da direção para a qual a balança do bem-estar se incline, o resultado final é sempre o mesmo: no fim do dia, é você quem equilibra a minha alma.
+        <br><br>
+
+        Quando tudo está bem e a balança está no topo, é em você que encontro o reflexo da minha felicidade. É de você que nasce minha força de vontade para evoluir, para ser uma versão melhor de mim. É você que desperta em mim o desejo de ir além, de construir, de sonhar, de querer mais, de viver mais.
+        <br><br>
+
+        E mesmo quando a balança desce e os problemas nos tocam, é por você que me esforço para evoluir. É com você que aprendo a compreender, perdoar, ouvir com o coração, diminuir o orgulho, ser mais maduro e fortalecer a empatia. Com você, aprendi que amar não é apenas celebrar os dias bons, mas também saber caminhar de mãos dadas, entrelaçadas, nos dias difíceis. Sem soltar, sem recuar e sem desistir.
+        <br><br><br>
+
+        Você é a minha calmaria quando o caos se aproxima, e a minha chama quando a vida parece apagar.<br> 
+        É a razão, o refúgio e o impulso.<br> 
+        Com você, entendi que o amor não é sobre perfeição, mas sim sobre sintonia — aquela conexão que permanece firme mesmo quando tudo ao redor parece desmoronar.
+        <br><br>
+        E é por isso que, não importa o que aconteça, sempre volto ao mesmo ponto: o centro do meu equilíbrio, o ponto exato entre o céu e a terra, é você.
       </p>
     </section>
 
-    <!-- Texto da carta -->
+    <!-- Seção 4: Carta 2 (slideshow + texto) -->
+    <section class="letter-section">
+      <!-- slideshow romântico -->
+      <div class="slideshow" style="width: 220px; height: 220px;">
+        <img src="fotos/Foto7.jpg" class="slide active" alt="Foto 7" />
+        <img src="fotos/Foto8.jpg" class="slide" alt="Foto 8" />
+        <img src="fotos/Foto9.jpg" class="slide" alt="Foto 9" />
+      </div>
+
+      <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin-top: 25px;">
+        Por do sol na barra - O pedido de namoro<br>
+<br>
+        "Preciso que você fique pronta 15:30, no máximo 16h".<br>
+	E você fingindo que não fazia ideia da surpresa. Cara de pau.
+	<br>
+	<br>
+	Que tarde incrível. A luz do por do sol sendo refletida nos seus olhos. A brisa da barra
+balançando seus cabelos. Você deitada no meu colo me encarando com um olhar de apaixonada. O cheirinho de mar misturado com o seu cheiro. O tio da vodka pingando a mão molhada na gente quando balançava o drink, e eu nervoso - pra variar - ja tramando te pedir em namoro.<br>
+Mais um momento marcante, mais uma memória inesquecível.
+<br>
+<br>
+"Aqui é um ótimo local pra te pedir em namoro" <br>
+"Achei que a gente ja tava namorando"<br>
+"Como se eu nao pedi?"<br>
+"E precisa pedir?"<br>
+"Claro. Quer namorar comigo?"<br>
+"Obvio que sim, meu amor"<br>
+      </p>
+    </section>
+
+    <!-- Seção 5: Pedido de casamento (já existente) -->
     <section class="letter-section">
       <p>
-        <!-- seu texto aqui, mantenha as quebras de linha <br> como desejar -->
-        Aqui fica o registro da cartinha que dediquei a você no que possivelmente foi o dia que mais fiquei nervoso na minha vida: a noite em que te pedi em casamento. Eu lembro cada minuto dessa noite. Dos ajustes que fui pensando e fazendo porque nada seguia o planejado, absurdo. De cada vez que eu levantava e trocava a aliança de bolso pra voce nao ver. Lembro da roupa que vc usava, como estava seu cabelo, lembro do seu cheiro naquela noite, do seu olhar de desconfiada, do seu sorriso, e lembro principalmente do seu SIM. Que noite.
-
-        "A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.<br>
+        <!-- texto do pedido mantido -->
+        E aqui fica o registro da cartinha que dediquei a você, onde a ideia desse site começou, no que possivelmente foi o dia que mais fiquei nervoso na minha vida: a noite em que te pedi em casamento. Eu lembro cada minuto dessa noite. Dos ajustes que fui pensando e fazendo porque nada seguia o planejado, absurdo. De cada vez que eu levantava e trocava a aliança de bolso pra você não ver. Lembro da roupa que vc usava, como estava seu cabelo, lembro do seu cheiro naquela noite, do seu olhar de desconfiada, do seu sorriso, e lembro principalmente do seu SIM. Que noite.
+        <br><br>
+        12/06/25 - Dia dos namorados:<br>
+        ""A data é comercial, tudo bem, mas por ser a nossa primeira, tem a sua devida importância.<br>
         Importante como o primeiro passeio, pra caminhar;<br>
         Importante como a primeira saída, pra jantar;<br>
         Importante como a primeira conversa, sobre se relacionar;<br>
@@ -213,31 +261,38 @@
         A minha missão, minha tenente, é te fazer <strong>FELIZ.</strong><br><br>
 
         Te amo minha gatinha, minha vida, minha deusa, minha musa, meu ar, meu chão, minha vida, <strong>meu tudo</strong><br>
-        Obs: Muito."
+        Obs: Muito."<br>
+        ...
+        <!-- resto do texto mantido -->
       </p>
     </section>
 
-    <!-- Book de fotos final -->
+    <!-- Seção final: Book de fotos -->
     <section>
       <div class="photo-book">
         <img src="fotos/Foto11.jpg" alt="Foto 11" />
         <img src="fotos/Foto1.jpg" alt="Foto 1" />
-<img src="fotos/Foto10.jpg" alt="Foto 10" />
+        <img src="fotos/Foto10.jpg" alt="Foto 10" />
+	<img src="fotos/Foto23.jpg" alt="Foto 23" />
+	<img src="fotos/Foto18.jpg" alt="Foto 18" />
         <img src="fotos/Foto4.jpg" alt="Foto 4" />
         <img src="fotos/Foto8.jpg" alt="Foto 8" />
+	<img src="fotos/Foto22.jpg" alt="Foto 22" />
         <img src="fotos/Foto14.jpg" alt="Foto 14" />
         <img src="fotos/Foto3.jpg" alt="Foto 3" />
         <img src="fotos/Foto9.jpg" alt="Foto 9" />
         <img src="fotos/Foto13.jpg" alt="Foto 13" />
         <img src="fotos/Foto5.jpg" alt="Foto 5" />
-<img src="fotos/Foto2.jpg" alt="Foto 2" />
-        <img src="fotos/Foto9.jpg" alt="Foto 9" />
-        <img src="fotos/Foto6.jpg" alt="Foto 6" />
-        <img src="fotos/Foto12.jpg" alt="Foto 12" />
-        <img src="fotos/Foto7.jpg" alt="Foto 7" />
-
+        <img src="fotos/Foto2.jpg" alt="Foto 2" />
+        <img src="fotos/Foto15.jpg" alt="Foto 15" />
+        <img src="fotos/Foto16.jpg" alt="Foto 16" />
+        <img src="fotos/Foto17.jpg" alt="Foto 17" />
+	<img src="fotos/Foto19.jpg" alt="Foto 19" />
+	<img src="fotos/Foto20.jpg" alt="Foto 20" />
+	<img src="fotos/Foto21.jpg" alt="Foto 21" />
       </div>
     </section>
+
   </main>
 
   <script src="script.js"></script>
